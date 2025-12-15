@@ -1,0 +1,198 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@plugin "daisyui";
+
+@plugin "daisyui" {
+    themes: light --default;
+}
+
+@layer base {
+    @font-face {
+        font-family: "Gilroy";
+        font-style: normal;
+        font-weight: 100;
+        font-display: swap;
+        src: url('@/fonts/gilroy/Gilroy-Thin.ttf') format('truetype');
+    }
+    @font-face {
+        font-family: "Gilroy";
+        font-style: italic;
+        font-weight: 100;
+        font-display: swap;
+        src: url('@/fonts/gilroy/Gilroy-ThinItalic.ttf') format('truetype');
+    }
+
+    @font-face {
+        font-family: "Gilroy";
+        font-style: normal;
+        font-weight: 200;
+        font-display: swap;
+        src: url('@/fonts/gilroy/Gilroy-UltraLight.ttf') format('truetype');
+    }
+    @font-face {
+        font-family: "Gilroy";
+        font-style: italic;
+        font-weight: 200;
+        font-display: swap;
+        src: url('@/fonts/gilroy/Gilroy-UltraLightItalic.ttf') format('truetype');
+    }
+
+    @font-face {
+        font-family: "Gilroy";
+        font-style: normal;
+        font-weight: 300;
+        font-display: swap;
+        src: url('@/fonts/gilroy/Gilroy-Light.ttf') format('truetype');
+    }
+    @font-face {
+        font-family: "Gilroy";
+        font-style: italic;
+        font-weight: 300;
+        font-display: swap;
+        src: url('@/fonts/gilroy/Gilroy-LightItalic.ttf') format('truetype');
+    }
+
+    @font-face {
+        font-family: "Gilroy";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url('@/fonts/gilroy/Gilroy-Regular.ttf') format('truetype');
+    }
+    @font-face {
+        font-family: "Gilroy";
+        font-style: italic;
+        font-weight: 400;
+        font-display: swap;
+        src: url('@/fonts/gilroy/Gilroy-RegularItalic.ttf') format('truetype');
+    }
+
+    @font-face {
+        font-family: "Gilroy";
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url('@/fonts/gilroy/Gilroy-Medium.ttf') format('truetype');
+    }
+    @font-face {
+        font-family: "Gilroy";
+        font-style: italic;
+        font-weight: 500;
+        font-display: swap;
+        src: url('@/fonts/gilroy/Gilroy-MediumItalic.ttf') format('truetype');
+    }
+
+    @font-face {
+        font-family: "Gilroy";
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url('@/fonts/gilroy/Gilroy-SemiBold.ttf') format('truetype');
+    }
+    @font-face {
+        font-family: "Gilroy";
+        font-style: italic;
+        font-weight: 600;
+        font-display: swap;
+        src: url('@/fonts/gilroy/Gilroy-SemiBoldItalic.ttf') format('truetype');
+    }
+
+    @font-face {
+        font-family: "Gilroy";
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url('@/fonts/gilroy/Gilroy-Bold.ttf') format('truetype');
+    }
+    @font-face {
+        font-family: "Gilroy";
+        font-style: italic;
+        font-weight: 700;
+        font-display: swap;
+        src: url('@/fonts/gilroy/Gilroy-BoldItalic.ttf') format('truetype');
+    }
+
+    @font-face {
+        font-family: "Gilroy";
+        font-style: normal;
+        font-weight: 800;
+        font-display: swap;
+        src: url('@/fonts/gilroy/Gilroy-ExtraBold.ttf') format('truetype');
+    }
+    @font-face {
+        font-family: "Gilroy";
+        font-style: italic;
+        font-weight: 800;
+        font-display: swap;
+        src: url('@/fonts/gilroy/Gilroy-ExtraBoldItalic.ttf') format('truetype');
+    }
+
+    @font-face {
+        font-family: "Gilroy";
+        font-style: normal;
+        font-weight: 900;
+        font-display: swap;
+        src: url('@/fonts/gilroy/Gilroy-Black.ttf') format('truetype');
+    }
+    @font-face {
+        font-family: "Gilroy";
+        font-style: italic;
+        font-weight: 900;
+        font-display: swap;
+        src: url('@/fonts/gilroy/Gilroy-BlackItalic.ttf') format('truetype');
+    }
+
+    @font-face {
+        font-family: "Gilroy";
+        font-style: normal;
+        font-weight: 950;
+        font-display: swap;
+        src: url('@/fonts/gilroy/Gilroy-Heavy.ttf') format('truetype');
+    }
+    @font-face {
+        font-family: "Gilroy";
+        font-style: italic;
+        font-weight: 950;
+        font-display: swap;
+        src: url('@/fonts/gilroy/Gilroy-HeavyItalic.ttf') format('truetype');
+    }
+}
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+html {
+    scrollbar-color: auto !important;
+}
+::-webkit-scrollbar {
+    @apply !w-1
+}
+::-webkit-scrollbar-thumb {
+    @apply bg-orange-600
+}
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-red-500
+}
+
+:where(.menu li:not(.menu-title, .disabled) > *:not(ul, details, .menu-title, .btn)),
+:where(.menu li:not(.menu-title, .disabled) > details > summary:not(.menu-title, .btn)) {
+    @apply transition-all;
+    &:not(.active):focus,
+    &:not(.active):focus-visible,
+    &:not(.active):hover {
+            @apply bg-transparent text-current font-bold;
+    }
+}
+
+.menu li > *:not(ul, .menu-title, details, .btn):active,
+.menu li > *:not(ul, .menu-title, details, .btn).active,
+.menu li > details > summary:active {
+    @apply bg-transparent text-current font-bold transition-all;
+}
