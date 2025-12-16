@@ -25,7 +25,36 @@ class PageSeeder extends Seeder
             'layout' => DefaultLayout::getName(),
             'title' => 'Ana Sayfa',
             'blocks' => [
-                //
+                $this->createBlock('hero', [
+                    //
+                ]),
+                $this->createBlock('stats', [
+                    //
+                ]),
+                $this->createBlock('about', [
+                    //
+                ]),
+                $this->createBlock('features', [
+                    //
+                ]),
+                $this->createBlock('products', [
+                    //
+                ]),
+                $this->createBlock('cta', [
+                    //
+                ]),
+                $this->createBlock('details', [
+                    //
+                ]),
+                $this->createBlock('facility', [
+                    //
+                ]),
+                $this->createBlock('quality', [
+                    //
+                ]),
+                $this->createBlock('contact', [
+                    //
+                ]),
             ],
         ]);
     }

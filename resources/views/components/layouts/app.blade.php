@@ -38,23 +38,21 @@
         @livewire('notifications')
     </head>
     
-    <body class="!overflow-x-hidden antialiased">
-        <x-preloader />
+    <body class="overflow-x-hidden! antialiased">
+        <main class="bg-zinc-950 text-white">
+            <x-preloader />
 
-        @if (! $hideLayout)
-            <x-layouts.navbar />
-        @endif
-        
+            @if (! $hideLayout)
+                <x-layouts.navbar />
+            @endif
+                {{ $slot }}
+            
+            <x-modals />
 
-        <main>
-            {{ $slot }}
+            @if (! $hideLayout)
+                <x-layouts.footer />
+            @endif
         </main>
-        
-        <x-modals />
-
-        @if (! $hideLayout)
-            <x-layouts.footer />
-        @endif
 
         @livewireScriptConfig 
         @stack('footer')
