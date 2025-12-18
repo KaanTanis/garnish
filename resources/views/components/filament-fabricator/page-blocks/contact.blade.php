@@ -1,6 +1,6 @@
 @aware(['page'])
 
-<section id="contact" class="py-32 relative">
+<section id="contact" class="py-16 md:py-32 relative">
     <div class="absolute inset-0 bg-linear-to-b from-zinc-950 via-orange-950/10 to-zinc-950"></div>
     <div class="relative container mx-auto px-6">
         <div class="max-w-6xl mx-auto">

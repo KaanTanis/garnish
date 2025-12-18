@@ -1,6 +1,6 @@
 @aware(['page'])
 
-<section class="py-32 relative">
+<section class="py-16 md:py-32 relative">
     <div class="container mx-auto px-6">
         <div class="max-w-5xl mx-auto text-center">
             <h2 class="text-5xl font-bold mb-6">Kalite & Güven</h2>

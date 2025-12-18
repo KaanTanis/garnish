@@ -1,6 +1,6 @@
 @aware(['page'])
 
-<section id="products" class="py-32 relative">
+<section id="products" class="py-16 md:py-32 relative">
     <div class="absolute inset-0 bg-linear-to-b from-zinc-950 via-orange-950/10 to-zinc-950"></div>
     <div class="relative container mx-auto px-6">
         <div class="text-center mb-20">
@@ -17,7 +17,9 @@
             {{-- Tenders --}}
             <div class="group relative overflow-hidden rounded-3xl bg-linear-to-br from-white/5 to-white/0 border border-white/10 hover:border-orange-500/50 transition-all duration-500">
                 <div class="aspect-square bg-linear-to-br from-orange-500/20 to-amber-500/20 flex items-center justify-center">
-                    <div class="text-8xl font-black text-white/10">TENDERS</div>
+                    <div class="font-black text-white/10 h-full w-full">
+                        <img src="{{ asset('temp/paket/tenders2.jpg') }}" alt="" class="h-full w-full object-cover">
+                    </div>
                 </div>
                 <div class="p-8">
                     <h3 class="text-3xl font-bold mb-4">Tenders</h3>
@@ -31,7 +33,9 @@
             {{-- Schnitzel --}}
             <div class="group relative overflow-hidden rounded-3xl bg-linear-to-br from-white/5 to-white/0 border border-white/10 hover:border-orange-500/50 transition-all duration-500">
                 <div class="aspect-square bg-linear-to-br from-amber-500/20 to-orange-500/20 flex items-center justify-center">
-                    <div class="text-7xl font-black text-white/10">ŞİNİTZEL</div>
+                    <div class="font-black text-white/10 h-full w-full">
+                        <img src="{{ asset('temp/paket/sinitzel2.jpg') }}" alt="" class="h-full w-full object-cover">
+                    </div>
                 </div>
                 <div class="p-8">
                     <h3 class="text-3xl font-bold mb-4">Şinitzel</h3>

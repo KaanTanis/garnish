@@ -1,65 +1,176 @@
 @aware(['page'])
 
-<section class="py-32 relative">
-    <div class="container mx-auto px-6">
-        <div class="grid md:grid-cols-3 gap-8">
-            {{-- Feature 1 --}}
-            <div class="group relative p-8 rounded-3xl bg-linear-to-br from-white/5 to-white/0 border border-white/10 hover:border-orange-500/50 transition-all duration-500 hover:scale-105">
-                <div class="absolute inset-0 bg-linear-to-br from-orange-500/0 to-orange-500/0 group-hover:from-orange-500/10 group-hover:to-amber-500/10 rounded-3xl transition-all duration-500"></div>
+{{-- Section 1: Yüksek Kaliteli Ham Maddeler --}}
+<section class="py-16 md:py-32 relative" data-feature-row>
+    <div class="absolute inset-0 bg-linear-to-b from-zinc-950 via-orange-950/10 to-zinc-950"></div>
+    <div class="relative container mx-auto px-6">
+        <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            {{-- Image left --}}
+            <div class="order-1 lg:order-1">
                 <div class="relative">
-                    <div class="w-14 h-14 rounded-2xl bg-orange-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
-                        <svg class="w-7 h-7 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
+                    <div class="absolute -top-10 -left-10 w-40 h-40 bg-orange-500/20 blur-3xl rounded-full pointer-events-none"></div>
+                    <div class="absolute -bottom-10 -right-6 w-32 h-32 bg-amber-400/15 blur-3xl rounded-full pointer-events-none"></div>
+
+                    <div class="relative overflow-hidden rounded-4xl border border-white/12 bg-white/5 backdrop-blur-sm shadow-[0_32px_100px_rgba(0,0,0,0.8)]">
+                        <div class="aspect-4/3 sm:aspect-square bg-no-repeat bg-cover bg-center"
+                            style="background-image: url('{{ asset('temp/sinitsel/1.jpeg') }}');">
+                        </div>
+                        <div class="absolute inset-0 bg-linear-to-t from-black/65 via-black/30 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between gap-3">
+                            <div>
+                                <div class="text-xs text-orange-200/90 uppercase tracking-[0.16em] mb-1">Temiz içerik</div>
+                                <p class="text-sm text-zinc-100">0% MDM, gerçek tavuk göğsü ile hazırlanan ürünler.</p>
+                            </div>
+                            <div class="hidden sm:flex flex-col items-end gap-1 text-right">
+                                <span class="text-xs text-zinc-400">İçerik</span>
+                                <span class="text-sm font-semibold text-orange-200">Güven veren etiket</span>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">Yüksek Kaliteli Ham Maddeler</h3>
-                    <p class="text-zinc-400 leading-relaxed">
-                        Tavuk ürünlerimiz MDM içermez. Daha iyi doku, daha temiz içerik ve daha güvenilir bir lezzet sunan tavuk göğsü tercih edilir.
-                    </p>
                 </div>
             </div>
 
-            {{-- Feature 2 --}}
-            <div class="group relative p-8 rounded-3xl bg-linear-to-br from-white/5 to-white/0 border border-white/10 hover:border-orange-500/50 transition-all duration-500 hover:scale-105">
-                <div class="absolute inset-0 bg-linear-to-br from-orange-500/0 to-orange-500/0 group-hover:from-orange-500/10 group-hover:to-amber-500/10 rounded-3xl transition-all duration-500"></div>
-                <div class="relative">
-                    <div class="w-14 h-14 rounded-2xl bg-orange-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
-                        <svg class="w-7 h-7 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">Şef Dokunuşu</h3>
-                    <p class="text-zinc-400 leading-relaxed mb-4">
-                        Her ürün, şeflerimizin özel tarifleri ile hazırlanır. Size sadece pişirmek kalır.
-                    </p>
-                    <p class="text-zinc-500 text-sm">
-                        Restoran lezzetini evinizde aynı çıtırlık ve keyifle bulursunuz.
-                    </p>
+            {{-- Copy right --}}
+            <div class="order-2 lg:order-2 space-y-6 text-lg text-zinc-400 leading-relaxed">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/30 text-orange-200 text-xs font-semibold uppercase tracking-[0.18em]">
+                    Yüksek Kaliteli Ham Maddeler
                 </div>
-            </div>
 
-            {{-- Feature 3 --}}
-            <div class="group relative p-8 rounded-3xl bg-linear-to-br from-white/5 to-white/0 border border-white/10 hover:border-orange-500/50 transition-all duration-500 hover:scale-105">
-                <div class="absolute inset-0 bg-linear-to-br from-orange-500/0 to-orange-500/0 group-hover:from-orange-500/10 group-hover:to-amber-500/10 rounded-3xl transition-all duration-500"></div>
-                <div class="relative">
-                    <div class="w-14 h-14 rounded-2xl bg-orange-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
-                        <svg class="w-7 h-7 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">Güvenli Üretim</h3>
-                    <p class="text-zinc-400 leading-relaxed">
-                        Modern otomasyon sistemleri, yüksek hijyen standartları ve kesintisiz kalite kontrol süreçleriyle güvenli üretim.
+                <div>
+                    <p class="text-xs tracking-[0.22em] uppercase text-orange-300/80 mb-2">
+                        Gerçek tavuk göğsü · Temiz içerik
+                    </p>
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight">
+                        Güven veren içerik,<br class="hidden sm:block"> net ve açık etiket
+                    </h2>
+                </div>
+
+                <div class="inline-flex flex-wrap gap-2 pt-2">
+                    <span class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-[11px] text-zinc-200">
+                        0% MDM
+                    </span>
+                    <span class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-[11px] text-zinc-200">
+                        Seçilmiş ham maddeler
+                    </span>
+                    <span class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-[11px] text-zinc-200">
+                        Doğallığı koruyan üretim
+                    </span>
+                </div>
+
+                <div class="space-y-4">
+                    <p>
+                        Ürünlerimizde yalnızca özenle seçilmiş yüksek kaliteli ham maddeler kullanırız.
+                    </p>
+                    <p>
+                        Tavuk ürünlerimiz MDM (mekanik ayrılmış et) içermez; bunun yerine daha iyi doku, daha temiz içerik ve daha güvenilir bir lezzet sunan tavuk göğsü tercih edilir.
+                    </p>
+                    <p>
+                        Her ürün, malzemenin doğallığını koruyan bir üretim yaklaşımıyla hazırlanır.
                     </p>
                 </div>
             </div>
         </div>
+    </div>
+</section>
 
-        <div class="mt-16 text-center">
-            <div class="inline-block px-8 py-4 rounded-2xl bg-linear-to-r from-orange-500/10 to-amber-500/10 border border-orange-500/20">
-                <p class="text-xl font-semibold">
-                    Her pakette <span class="text-orange-500">aynı kalite</span>, <span class="text-orange-500">aynı lezzet</span>, <span class="text-orange-500">aynı güven</span>
-                </p>
+{{-- Section 2: Şef Dokunuşu --}}
+<section class="py-16 md:py-32 relative" data-feature-row>
+    <div class="absolute inset-0 bg-linear-to-b from-zinc-950 via-black to-zinc-950"></div>
+    <div class="relative container mx-auto px-6">
+        <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            {{-- Copy left --}}
+            <div class="order-2 lg:order-1 space-y-6 text-lg text-zinc-400 leading-relaxed">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/30 text-orange-200 text-xs font-semibold uppercase tracking-[0.18em]">
+                    Şef Dokunuşu
+                </div>
+
+                <div class="space-y-3">
+                    <p class="text-xs tracking-[0.22em] uppercase text-orange-300/80">
+                        Restoran reçeteleri
+                    </p>
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight">
+                        Evde, menüdeki o<br class="hidden sm:block"> “favori” lezzet
+                    </h2>
+                </div>
+
+                <div class="space-y-4">
+                    <p>
+                        Her ürün, şeflerimizin özel tarifleri ile hazırlanır. Size sadece ürünlerimizi pişirmek kalır.
+                    </p>
+                    <p>
+                        Bu sayede dışarıda yediğiniz o “restoran lezzetini” evinizde de aynı çıtırlık, aynı tat ve aynı keyifle bulursunuz.
+                    </p>
+                </div>
+            </div>
+
+            {{-- Image right --}}
+            <div class="order-2 lg:order-1">
+                <div class="relative">
+                    <div class="absolute -top-10 -right-10 w-40 h-40 bg-orange-500/18 blur-3xl rounded-full pointer-events-none"></div>
+                    <div class="absolute -bottom-10 -left-6 w-32 h-32 bg-amber-400/15 blur-3xl rounded-full pointer-events-none"></div>
+
+                    <div class="relative overflow-hidden rounded-4xl border border-white/15 bg-white/5 backdrop-blur-sm shadow-[0_32px_100px_rgba(0,0,0,0.85)]">
+                        <div class="aspect-4/3 sm:aspect-16/10 bg-no-repeat bg-cover bg-center"
+                            style="background-image: url('{{ asset('temp/sinitsel/2.jpg') }}');">
+                        </div>
+                        <div class="absolute inset-0 bg-linear-to-t from-black/65 via-black/30 to-transparent"></div>
+                        <div class="absolute top-4 left-4 px-4 py-2 rounded-full bg-black/60 border border-white/20 text-[11px] font-semibold uppercase tracking-[0.18em] text-orange-100">
+                            Şef dokunuşu
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{-- Section 3: Güvenli ve Özenli Üretim --}}
+<section class="py-16 md:py-32 relative" data-feature-row>
+    <div class="absolute inset-0 bg-linear-to-b from-zinc-950 via-orange-950/10 to-zinc-950"></div>
+    <div class="relative container mx-auto px-6">
+        <div class="max-w-6xl mx-auto space-y-12">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/30 text-orange-200 text-xs font-semibold uppercase tracking-[0.18em]">
+                    Güvenli ve Özenli Üretim
+                </div>
+                <h2 class="mt-6 text-3xl sm:text-4xl md:text-5xl font-bold text-white">
+                    Modern tesis, izlenebilir süreçler
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-[1.2fr,1.1fr] gap-10 items-start text-lg text-zinc-400 leading-relaxed">
+                <div class="space-y-5">
+                    <p>
+                        Modern otomasyon sistemleriyle donatılmış üretim tesisimizde; yüksek hijyen standartları, kesintisiz kalite kontrol süreçleri ve güvenli donuk zincir yönetimiyle üretim yapıyoruz.
+                    </p>
+                    <p>
+                        Ürünlerimiz makinelerin sunduğu kalite gücüyle üretilirken, şef reçeteleri, özel kaplama teknikleri ve lezzet dengesi sayesinde artizan ruhunu ve ev yapımı tadını daima korur.
+                    </p>
+                    <p class="text-white font-semibold">
+                        Sonuç: Her pakette aynı kalite, aynı lezzet ve aynı güven.
+                    </p>
+                </div>
+
+                <div class="grid sm:grid-cols-3 gap-4">
+                    <div class="relative overflow-hidden rounded-2xl border border-white/10 bg-white/5">
+                        <div class="aspect-[4/5] bg-no-repeat bg-cover bg-center"
+                             style="background-image: url('{{ asset('temp/facility/facility-1.jpg') }}');">
+                        </div>
+                        <div class="absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent"></div>
+                    </div>
+                    <div class="relative overflow-hidden rounded-2xl border border-white/10 bg-white/5">
+                        <div class="aspect-[4/5] bg-no-repeat bg-cover bg-center"
+                             style="background-image: url('{{ asset('temp/facility/facility-2.jpg') }}');">
+                        </div>
+                        <div class="absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent"></div>
+                    </div>
+                    <div class="relative overflow-hidden rounded-2xl border border-white/10 bg-white/5">
+                        <div class="aspect-[4/5] bg-no-repeat bg-cover bg-center"
+                             style="background-image: url('{{ asset('temp/facility/facility-3.jpg') }}');">
+                        </div>
+                        <div class="absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

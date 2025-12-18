@@ -1,6 +1,6 @@
 @aware(['page'])
 
-<section class="py-32 relative">
+<section class="py-16 md:py-32 relative">
     <div class="container mx-auto px-6">
         <div class="max-w-5xl mx-auto">
             <h3 class="text-4xl font-bold mb-12">Markanıza Sağladığı Avantajlar</h3>

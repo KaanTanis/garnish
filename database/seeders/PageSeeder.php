@@ -46,9 +46,6 @@ class PageSeeder extends Seeder
                 $this->createBlock('details', [
                     //
                 ]),
-                $this->createBlock('facility', [
-                    //
-                ]),
                 $this->createBlock('quality', [
                     //
                 ]),
