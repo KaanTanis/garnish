@@ -18,7 +18,21 @@
 
 @aware(['page'])
 
+{{-- Title Section (at the end or beginning) --}}
+<div class="relative py-20 md:py-32 border-b border-white/5">
+    <div class="container mx-auto px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-black mb-6">
+                <span class="block text-white">{{ $title }}</span>
+            </h1>
+            <div class="w-32 h-1 bg-linear-to-r from-transparent via-orange-500 to-transparent mx-auto"></div>
+        </div>
+    </div>
+</div>
+
 <section class="relative">
+
+
     <div class="absolute inset-0 bg-zinc-950"></div>
     
     @foreach($products as $index => $product)
@@ -108,18 +122,6 @@
             @endif
         </div>
     @endforeach
-
-    {{-- Title Section (at the end or beginning) --}}
-    <div class="relative py-20 md:py-32 border-b border-white/5">
-        <div class="container mx-auto px-6">
-            <div class="max-w-4xl mx-auto text-center">
-                <h1 class="text-5xl md:text-7xl lg:text-8xl font-black mb-6">
-                    <span class="block text-white">{{ $title }}</span>
-                </h1>
-                <div class="w-32 h-1 bg-linear-to-r from-transparent via-orange-500 to-transparent mx-auto"></div>
-            </div>
-        </div>
-    </div>
 </section>
 
 
