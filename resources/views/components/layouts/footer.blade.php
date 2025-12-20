@@ -46,8 +46,11 @@
                 </div>
             </div>
         </div>
-        <div class="border-t border-white/5 pt-8 text-center text-sm text-zinc-500">
-            <p>&copy; 2024 Frochi - Tüm hakları saklıdır. | Garnish Gıda</p>
+        <div class="border-t border-white/5 pt-8 text-center text-sm text-zinc-400">
+            <p>&copy; {{ date('Y') }} Frochi - Tüm hakları saklıdır. | Garnish Gıda</p>
+        </div>
+        <div class="pt-2 text-center text-[10px] text-zinc-500 font-mono">
+            <p>Designed by <a target="_blank" href="https://cacto.com.tr">cacto</a></p>
         </div>
     </div>
 </footer>

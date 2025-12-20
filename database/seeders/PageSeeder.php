@@ -170,11 +170,13 @@ class PageSeeder extends Seeder
                             'name' => 'Tenders',
                             'description' => 'Çıtır doku, sulu iç yapı, dengeli baharat.',
                             'features' => ['Çıtır doku', 'Sulu iç yapı', 'Dengeli baharat'],
+                            'image' => '/temp/paket/tenders2.jpg',
                         ],
                         [
                             'name' => 'Şinitzel',
                             'description' => 'Kaliteli kaplama, gerçekçi doku, doyurucu lezzet.',
                             'features' => ['Kaliteli kaplama', 'Gerçekçi doku', 'Doyurucu lezzet'],
+                            'image' => '/temp/paket/sinitzel2.jpg',
                         ],
                     ],
                 ]),

@@ -20,7 +20,7 @@ class EditPage extends EditRecord
             Action::make('save')
                 ->action('save')
                 ->label('Kaydet'),
-            DeleteAction::make(),
+            // DeleteAction::make(),
         ];
     }
 }

@@ -86,24 +86,24 @@ class PageResource extends Resource
                                     ->debounce('500ms')
                                     ->required(),
 
-                                Hidden::make('is_slug_changed_manually')
-                                    ->default(false)
-                                    ->dehydrated(false),
+                                // Hidden::make('is_slug_changed_manually')
+                                //     ->default(false)
+                                //     ->dehydrated(false),
 
-                                TextInput::make('slug')
-                                    ->label(__('filament-fabricator::page-resource.labels.slug'))
-                                    ->unique(ignoreRecord: true, modifyRuleUsing: fn (Unique $rule, Get $get) => $rule->where('parent_id', $get('parent_id')))
-                                    ->afterStateUpdated(function (Set $set) {
-                                        $set('is_slug_changed_manually', true);
-                                    })
-                                    ->rule(function ($state) {
-                                        return function (string $attribute, $value, Closure $fail) use ($state) {
-                                            if ($state !== '/' && (Str::startsWith($value, '/') || Str::endsWith($value, '/'))) {
-                                                $fail(__('filament-fabricator::page-resource.errors.slug_starts_or_ends_with_slash'));
-                                            }
-                                        };
-                                    })
-                                    ->required(),
+                                // TextInput::make('slug')
+                                //     ->label(__('filament-fabricator::page-resource.labels.slug'))
+                                //     ->unique(ignoreRecord: true, modifyRuleUsing: fn (Unique $rule, Get $get) => $rule->where('parent_id', $get('parent_id')))
+                                //     ->afterStateUpdated(function (Set $set) {
+                                //         $set('is_slug_changed_manually', true);
+                                //     })
+                                //     ->rule(function ($state) {
+                                //         return function (string $attribute, $value, Closure $fail) use ($state) {
+                                //             if ($state !== '/' && (Str::startsWith($value, '/') || Str::endsWith($value, '/'))) {
+                                //                 $fail(__('filament-fabricator::page-resource.errors.slug_starts_or_ends_with_slash'));
+                                //             }
+                                //         };
+                                //     })
+                                //     ->required(),
 
                                 Select::make('layout')
                                     ->label(__('filament-fabricator::page-resource.labels.layout'))
