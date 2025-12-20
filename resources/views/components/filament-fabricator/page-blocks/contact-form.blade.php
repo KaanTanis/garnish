@@ -1,7 +1,4 @@
 @props([
-    'badge' => 'İletişim',
-    'title' => 'Bize Ulaşın',
-    'subtitle' => 'Sorularınız, işbirliği talepleriniz ve toplu satış başvurularınız için',
     'address' => "Kurbanlı Mah. OSB 1013 Sk. No: 5\nTarsus / Mersin",
     'email' => 'info@garnishgida.com',
     'phone' => '+90 XXX XXX XX XX',
@@ -9,20 +6,10 @@
 
 @aware(['page'])
 
-<section id="contact" class="py-16 md:py-32 relative">
+<section class="py-16 md:py-32 relative">
     <div class="absolute inset-0 bg-linear-to-b from-zinc-950 via-orange-950/10 to-zinc-950"></div>
     <div class="relative container mx-auto px-6">
         <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-16">
-                <div class="inline-block mb-6 px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-500 text-sm font-medium">
-                    {{ $badge }}
-                </div>
-                <h2 class="text-5xl font-bold mb-6">{{ $title }}</h2>
-                <p class="text-xl text-zinc-400">
-                    {{ $subtitle }}
-                </p>
-            </div>
-
             <div class="grid md:grid-cols-2 gap-12">
                 {{-- Contact Info --}}
                 <div class="space-y-8">
@@ -71,30 +58,12 @@
                 </div>
 
                 {{-- Contact Form --}}
-                <div class="p-8 rounded-2xl bg-linear-to-br from-white/5 to-white/0 border border-white/10">
-                    <form class="space-y-6">
-                        <div>
-                            <label class="block text-sm font-medium mb-2 text-zinc-400">Ad Soyad</label>
-                            <input type="text" class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20 transition-all text-white placeholder-zinc-500" placeholder="Adınızı girin">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium mb-2 text-zinc-400">E-posta</label>
-                            <input type="email" class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20 transition-all text-white placeholder-zinc-500" placeholder="E-posta adresiniz">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium mb-2 text-zinc-400">Telefon</label>
-                            <input type="tel" class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20 transition-all text-white placeholder-zinc-500" placeholder="Telefon numaranız">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium mb-2 text-zinc-400">Mesajınız</label>
-                            <textarea rows="4" class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20 transition-all text-white placeholder-zinc-500 resize-none" placeholder="Mesajınızı yazın..."></textarea>
-                        </div>
-                        <button type="submit" class="w-full px-6 py-4 bg-linear-to-r from-orange-600 to-amber-600 rounded-xl font-semibold hover:shadow-2xl hover:shadow-orange-500/50 transition-all duration-300 hover:scale-105">
-                            Gönder
-                        </button>
-                    </form>
-                </div>
+                {{-- <div class="p-8 rounded-2xl bg-linear-to-br from-white/5 to-white/0 border border-white/10">
+                    <h3 class="text-2xl font-bold mb-6">Mesaj Gönderin</h3>
+                    <livewire:contact-form />
+                </div> --}}
             </div>
         </div>
     </div>
 </section>
+

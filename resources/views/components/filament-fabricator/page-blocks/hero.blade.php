@@ -1,3 +1,15 @@
+@props([
+    'badge_1' => 'FROCHI · Mutlu çıtır anlar',
+    'badge_2' => 'Restoran kalitesinde tavuk',
+    'badge_3' => 'Mutlu çıtır ısırık',
+    'title_1' => 'Hayatın koşturmacasında',
+    'title_2' => 'çıtır mutluluk molası',
+    'subtitle' => 'Restoran lezzetini eve taşıyan, şef tarifleriyle hazırlanan premium tavuk ürünleri. Hızlı, güvenilir ve her lokmada aynı çıtırlık.',
+    'image_text' => 'Tam göğüs, tam çıtırlık',
+    'image_text_2' => 'Şef reçetesi · Temiz içerik · Modern üretim',
+    'image_quality' => 'Tavuk göğsü · Düşük fire · Stabil performans'
+])
+
 <section id="hero" class="relative min-h-screen flex items-center overflow-hidden">
     <div class="absolute inset-0 bg-linear-to-br from-zinc-950 via-orange-950/20 to-amber-800/40"></div>
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.08),transparent_45%),radial-gradient(circle_at_80%_0%,rgba(255,153,102,0.2),transparent_35%),radial-gradient(circle_at_60%_70%,rgba(255,255,255,0.04),transparent_40%)]"></div>
@@ -8,19 +20,19 @@
         <div class="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-14 items-center">
             <div class="space-y-6 lg:space-y-8 max-w-3xl" data-hero-copy>
                 <div class="flex flex-wrap items-center gap-2 sm:gap-3">
-                    <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm font-semibold text-orange-300">FROCHI · Mutlu çıtır anlar</span>
-                    <span class="px-4 py-2 rounded-full bg-orange-500/15 border border-orange-500/30 text-sm font-semibold text-orange-100">Restoran kalitesinde tavuk</span>
+                    <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm font-semibold text-orange-300">{{ $badge_1 }}</span>
+                    <span class="px-4 py-2 rounded-full bg-orange-500/15 border border-orange-500/30 text-sm font-semibold text-orange-100">{{ $badge_2 }}</span>
                 </div>
 
                 <div class="space-y-4">
                     <h1 class="text-4xl sm:text-5xl xl:text-7xl font-black leading-tight tracking-tight">
-                        <span class="block text-orange-200">Hayatın koşturmacasında</span>
+                        <span class="block text-orange-200">{{ $title_1 }}</span>
                         <span class="block bg-linear-to-r from-white via-amber-100 to-orange-200 bg-clip-text text-transparent text-3xl sm:text-4xl xl:text-6xl">
-                            çıtır mutluluk molası
+                            {{ $title_2 }}
                         </span>
                     </h1>
                     <p class="text-lg sm:text-xl text-zinc-200/90 leading-relaxed max-w-2xl">
-                        Restoran lezzetini eve taşıyan, şef tarifleriyle hazırlanan premium tavuk ürünleri. Hızlı, güvenilir ve her lokmada aynı çıtırlık.
+                        {{ $subtitle }}
                     </p>
                 </div>
 
@@ -61,15 +73,15 @@
                     <div class="aspect-4/5 bg-no-repeat bg-cover bg-center" style="background-image: url({{ asset('temp/hero.jpeg') }})">
                         <div class="absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent"></div>
                         <div class="absolute top-6 left-6 px-4 py-2 rounded-full bg-white/15 text-xs font-semibold uppercase tracking-[0.15em] text-orange-100/90 border border-white/20">
-                            Mutlu çıtır ısırık
+                            {{ $badge_3 }}
                         </div>
                         <div class="absolute bottom-6 left-6 right-6">
                             <div class="p-4 rounded-2xl bg-black/50 border border-white/10 backdrop-blur">
                                 <div class="flex items-start justify-between gap-4">
                                     <div>
                                         <div class="text-sm text-orange-200/90 mb-1">FROCHI</div>
-                                        <div class="text-xl font-semibold">Tam göğüs, tam çıtırlık</div>
-                                        <p class="text-sm text-zinc-300 mt-2">Şef reçetesi · Temiz içerik · Modern üretim</p>
+                                        <div class="text-xl font-semibold">{{ $image_text }}</div>
+                                        <p class="text-sm text-zinc-300 mt-2">{{ $image_text_2 }}</p>
                                     </div>
                                     <div class="px-3 py-2 rounded-xl bg-orange-500/20 text-orange-100 text-xs font-semibold border border-orange-500/30">
                                         0% MDM
@@ -82,7 +94,7 @@
 
                 <div class="absolute -right-4 -bottom-10 w-52 rounded-3xl bg-white/10 border border-white/20 backdrop-blur-xl p-4 shadow-xl shadow-black/40" data-parallax data-speed="12">
                     <div class="text-5xl font-black text-orange-300 leading-none mb-1">100%</div>
-                    <div class="text-xs text-zinc-300">Tavuk göğsü · Düşük fire · Stabil performans</div>
+                    <div class="text-xs text-zinc-300">{{ $image_quality }}</div>
                 </div>
             </div>
         </div>

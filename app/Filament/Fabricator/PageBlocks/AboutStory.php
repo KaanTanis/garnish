@@ -7,23 +7,18 @@ use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
 use Z3d0X\FilamentFabricator\PageBlocks\PageBlock;
 
-class About extends PageBlock
+class AboutStory extends PageBlock
 {
-    protected static string $name = 'about';
+    protected static string $name = 'about-story';
 
     public static function defineBlock(Block $block): Block
     {
         return $block
             ->schema([
-                TextInput::make('badge')->label('Badge'),
-                TextInput::make('title_1')->label('Başlık 1'),
-                TextInput::make('title_2')->label('Başlık 2'),
+                TextInput::make('title')->label('Başlık')->default('Hikayemiz'),
                 Textarea::make('paragraph_1')->label('Paragraf 1')->rows(3),
                 Textarea::make('paragraph_2')->label('Paragraf 2')->rows(2),
                 Textarea::make('paragraph_3')->label('Paragraf 3')->rows(3),
-                TextInput::make('feature_1')->label('Özellik 1'),
-                TextInput::make('feature_2')->label('Özellik 2'),
-                TextInput::make('feature_3')->label('Özellik 3'),
             ]);
     }
 
@@ -32,3 +27,4 @@ class About extends PageBlock
         return $data;
     }
 }
+

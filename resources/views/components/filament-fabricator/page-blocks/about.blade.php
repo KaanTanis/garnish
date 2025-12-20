@@ -1,3 +1,15 @@
+@props([
+    'badge' => 'Hikayemiz',
+    'title_1' => 'Hayatın koşturmacasında',
+    'title_2' => 'yanınızdayız',
+    'paragraph_1' => 'Bazen yemek hazırlayacak vaktimiz olmuyor, bazen misafirlerimize evde hızlıca güzel bir şeyler sunmak istiyoruz, bazen de sadece kendimize küçük bir keyif anı ayırıp yemeğimizin tadını çıkarmak...',
+    'paragraph_2' => 'tam da bu anlarda en güvenilir ve en lezzetli alternatif olmak.',
+    'paragraph_3' => 'Restoran lezzetini evinize taşırken, sevdiklerinize güvenle ikram edebileceğiniz ve kendiniz de gönül rahatlığıyla tüketebileceğiniz kaliteli ürünler sunmak için varız.',
+    'feature_1' => 'Yüksek kaliteli ham maddeler',
+    'feature_2' => 'Şef tarifleri',
+    'feature_3' => 'Temiz içerik yaklaşımı',
+])
+
 @aware(['page'])
 
 <section id="about" class="py-16 md:py-32 relative">
@@ -43,23 +55,23 @@
                 <div class="order-2 lg:order-1 text-lg text-zinc-400 leading-relaxed space-y-8">
                     <div>
                         <div class="inline-block mb-4 px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-500 text-sm font-medium">
-                            Hikayemiz
+                            {{ $badge }}
                         </div>
                         <h2 class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-4">
-                            Hayatın koşturmacasında<br>
-                            <span class="text-orange-500">yanınızdayız</span>
+                            {{ $title_1 }}<br>
+                            <span class="text-orange-500">{{ $title_2 }}</span>
                         </h2>
                     </div>
 
                     <div class="space-y-5">
                         <p>
-                            Bazen yemek hazırlayacak vaktimiz olmuyor, bazen misafirlerimize evde hızlıca güzel bir şeyler sunmak istiyoruz, bazen de sadece kendimize küçük bir keyif anı ayırıp yemeğimizin tadını çıkarmak...
+                            {{ $paragraph_1 }}
                         </p>
                         <p>
-                            <span class="text-white font-semibold">Frochi olarak amacımız</span>, tam da bu anlarda en güvenilir ve en lezzetli alternatif olmak.
+                            <span class="text-white font-semibold">Frochi olarak amacımız</span>, {{ $paragraph_2 }}
                         </p>
                         <p>
-                            Restoran lezzetini evinize taşırken, sevdiklerinize güvenle ikram edebileceğiniz ve kendiniz de gönül rahatlığıyla tüketebileceğiniz kaliteli ürünler sunmak için varız.
+                            {{ $paragraph_3 }}
                         </p>
                     </div>
 
@@ -67,19 +79,19 @@
                         <div class="flex items-start gap-3">
                             <div class="mt-1 w-2 h-2 rounded-full bg-orange-500"></div>
                             <div>
-                                <div class="text-white text-sm font-semibold">Yüksek kaliteli ham maddeler</div>
+                                <div class="text-white text-sm font-semibold">{{ $feature_1 }}</div>
                             </div>
                         </div>
                         <div class="flex items-start gap-3">
                             <div class="mt-1 w-2 h-2 rounded-full bg-orange-500"></div>
                             <div>
-                                <div class="text-white text-sm font-semibold">Şef tarifleri</div>
+                                <div class="text-white text-sm font-semibold">{{ $feature_2 }}</div>
                             </div>
                         </div>
                         <div class="flex items-start gap-3">
                             <div class="mt-1 w-2 h-2 rounded-full bg-orange-500"></div>
                             <div>
-                                <div class="text-white text-sm font-semibold">Temiz içerik yaklaşımı</div>
+                                <div class="text-white text-sm font-semibold">{{ $feature_3 }}</div>
                             </div>
                         </div>
                     </div>

@@ -1,3 +1,13 @@
+@props([
+    'badge' => 'Ürün Gamı',
+    'title' => 'Ürünlerimiz',
+    'subtitle' => 'Kaliteli ham maddeler ve şef tarifleriyle hazırlanan premium tavuk ürünleri',
+    'product_1_name' => 'Tenders',
+    'product_1_description' => 'Çıtır doku, sulu iç yapı, dengeli baharat. Her lokmada restoran kalitesi.',
+    'product_2_name' => 'Şinitzel',
+    'product_2_description' => 'Kaliteli kaplama, gerçekçi doku, doyurucu lezzet. Premium şef reçetesi.',
+])
+
 @aware(['page'])
 
 <section id="products" class="py-16 md:py-32 relative">
@@ -5,11 +15,11 @@
     <div class="relative container mx-auto px-6">
         <div class="text-center mb-20">
             <div class="inline-block mb-6 px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-500 text-sm font-medium">
-                Ürün Gamı
+                {{ $badge }}
             </div>
-            <h2 class="text-5xl md:text-7xl font-bold mb-6">Ürünlerimiz</h2>
+            <h2 class="text-5xl md:text-7xl font-bold mb-6">{{ $title }}</h2>
             <p class="text-xl text-zinc-400 max-w-2xl mx-auto">
-                Kaliteli ham maddeler ve şef tarifleriyle hazırlanan premium tavuk ürünleri
+                {{ $subtitle }}
             </p>
         </div>
 
@@ -22,9 +32,9 @@
                     </div>
                 </div>
                 <div class="p-8">
-                    <h3 class="text-3xl font-bold mb-4">Tenders</h3>
+                    <h3 class="text-3xl font-bold mb-4">{{ $product_1_name }}</h3>
                     <p class="text-zinc-400 text-lg">
-                        Çıtır doku, sulu iç yapı, dengeli baharat. Her lokmada restoran kalitesi.
+                        {{ $product_1_description }}
                     </p>
                 </div>
                 <div class="absolute inset-0 bg-linear-to-t from-orange-500/0 to-orange-500/0 group-hover:from-orange-500/20 group-hover:to-transparent transition-all duration-500 pointer-events-none"></div>
@@ -38,9 +48,9 @@
                     </div>
                 </div>
                 <div class="p-8">
-                    <h3 class="text-3xl font-bold mb-4">Şinitzel</h3>
+                    <h3 class="text-3xl font-bold mb-4">{{ $product_2_name }}</h3>
                     <p class="text-zinc-400 text-lg">
-                        Kaliteli kaplama, gerçekçi doku, doyurucu lezzet. Premium şef reçetesi.
+                        {{ $product_2_description }}
                     </p>
                 </div>
                 <div class="absolute inset-0 bg-linear-to-t from-orange-500/0 to-orange-500/0 group-hover:from-orange-500/20 group-hover:to-transparent transition-all duration-500 pointer-events-none"></div>

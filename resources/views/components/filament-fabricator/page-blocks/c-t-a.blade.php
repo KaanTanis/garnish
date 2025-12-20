@@ -1,3 +1,17 @@
+@props([
+    'title' => 'FROCHI → GARNISH',
+    'subtitle' => 'Profesyonel Mutfaklar İçin Premium Çözümler',
+    'description' => 'Restoran, kafe, otel ve catering mutfakları için özel geliştirilen Garnish markamız. Gerçek tavuk göğsü, düşük fire, stabil pişirme performansı ve premium kaplama teknolojisi.',
+    'stat_1_value' => 'Yüksek',
+    'stat_1_label' => 'Performans',
+    'stat_2_value' => 'Stabil',
+    'stat_2_label' => 'Kalite',
+    'stat_3_value' => 'Düşük',
+    'stat_3_label' => 'Fire Oranı',
+    'cta_text' => 'Toplu Satış Bilgi Al',
+    'cta_link' => '#contact',
+])
+
 @aware(['page'])
 
 <section id="garnish" class="py-16 md:py-32 relative overflow-hidden">
@@ -6,29 +20,29 @@
     
     <div class="relative container mx-auto px-6 text-center">
         <div class="max-w-4xl mx-auto">
-            <div class="text-7xl font-black mb-6">FROCHI → GARNISH</div>
-            <h3 class="text-3xl md:text-4xl font-bold mb-6">Profesyonel Mutfaklar İçin Premium Çözümler</h3>
+            <div class="text-7xl font-black mb-6">{{ $title }}</div>
+            <h3 class="text-3xl md:text-4xl font-bold mb-6">{{ $subtitle }}</h3>
             <p class="text-xl mb-12 opacity-90 leading-relaxed">
-                Restoran, kafe, otel ve catering mutfakları için özel geliştirilen Garnish markamız. Gerçek tavuk göğsü, düşük fire, stabil pişirme performansı ve premium kaplama teknolojisi.
+                {{ $description }}
             </p>
 
             <div class="grid md:grid-cols-3 gap-6 mb-12">
                 <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                    <div class="text-4xl font-bold mb-2">Yüksek</div>
-                    <div class="text-sm opacity-80">Performans</div>
+                    <div class="text-4xl font-bold mb-2">{{ $stat_1_value }}</div>
+                    <div class="text-sm opacity-80">{{ $stat_1_label }}</div>
                 </div>
                 <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                    <div class="text-4xl font-bold mb-2">Stabil</div>
-                    <div class="text-sm opacity-80">Kalite</div>
+                    <div class="text-4xl font-bold mb-2">{{ $stat_2_value }}</div>
+                    <div class="text-sm opacity-80">{{ $stat_2_label }}</div>
                 </div>
                 <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                    <div class="text-4xl font-bold mb-2">Düşük</div>
-                    <div class="text-sm opacity-80">Fire Oranı</div>
+                    <div class="text-4xl font-bold mb-2">{{ $stat_3_value }}</div>
+                    <div class="text-sm opacity-80">{{ $stat_3_label }}</div>
                 </div>
             </div>
 
-            <a href="#contact" class="inline-block px-10 py-5 bg-zinc-950 text-white rounded-full font-bold text-lg hover:scale-105 hover:shadow-2xl hover:shadow-black/50 transition-all duration-300">
-                Toplu Satış Bilgi Al
+            <a href="{{ $cta_link }}" class="inline-block px-10 py-5 bg-zinc-950 text-white rounded-full font-bold text-lg hover:scale-105 hover:shadow-2xl hover:shadow-black/50 transition-all duration-300">
+                {{ $cta_text }}
             </a>
         </div>
     </div>
