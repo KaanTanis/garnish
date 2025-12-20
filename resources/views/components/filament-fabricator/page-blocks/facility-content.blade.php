@@ -16,39 +16,55 @@
 
 @aware(['page'])
 
-<section class="py-16 md:py-32 relative">
-    <div class="absolute inset-0 bg-linear-to-b from-zinc-950 via-orange-950/10 to-zinc-950"></div>
-    <div class="relative container mx-auto px-6">
-        <div class="max-w-6xl mx-auto space-y-12">
-            <div class="max-w-3xl">
-                <div class="inline-block mb-4 px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-500 text-sm font-medium">
-                    {{ $title }}
-                </div>
-                <p class="text-lg text-zinc-400 leading-relaxed">{{ $description }}</p>
-            </div>
-
-            <div class="grid md:grid-cols-[1.2fr,1.1fr] gap-10 items-start">
-                <div class="space-y-5">
-                    <h3 class="text-2xl font-bold mb-4">Tesis Özellikleri</h3>
-                    <div class="grid sm:grid-cols-2 gap-4">
-                        @foreach($features as $feature)
-                            <div class="flex items-start gap-3 p-4 rounded-2xl bg-white/5 border border-white/10">
-                                <div class="mt-1 w-2 h-2 rounded-full bg-orange-500"></div>
-                                <div class="text-zinc-300">{{ $feature }}</div>
+<section class="relative min-h-screen flex items-center overflow-hidden border-t border-white/5">
+    <div class="absolute inset-0 bg-zinc-950"></div>
+    
+    {{-- Large decorative number --}}
+    <div class="absolute top-1/2 left-0 -translate-y-1/2 text-[30rem] font-black text-white/5 leading-none select-none">
+        02
+    </div>
+    
+    <div class="relative container mx-auto px-6 py-20 md:py-32">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-12 gap-12 lg:gap-20">
+                {{-- Features Left --}}
+                <div class="lg:col-span-5">
+                    <div class="mb-6">
+                        <div class="w-16 h-px bg-linear-to-r from-orange-500 to-transparent mb-6"></div>
+                        <h2 class="text-5xl md:text-6xl lg:text-7xl font-black mb-8 leading-tight">
+                            <span class="block text-white">{{ $title }}</span>
+                        </h2>
+                    </div>
+                    
+                    <p class="text-lg md:text-xl text-zinc-300 leading-relaxed mb-12">
+                        {{ $description }}
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <h3 class="text-2xl font-bold text-white mb-6">Tesis Özellikleri</h3>
+                        @foreach($features as $index => $feature)
+                            <div class="flex items-start gap-4">
+                                <div class="mt-2 w-1.5 h-1.5 rounded-full bg-orange-500 shrink-0"></div>
+                                <span class="text-lg text-zinc-200">{{ $feature }}</span>
                             </div>
                         @endforeach
                     </div>
                 </div>
-
-                <div class="grid sm:grid-cols-3 gap-4">
-                    @foreach($images as $image)
-                        <div class="relative overflow-hidden rounded-2xl border border-white/10 bg-white/5">
-                            <div class="aspect-[4/5] bg-no-repeat bg-cover bg-center"
-                                 style="background-image: url('{{ asset($image) }}');">
+                
+                {{-- Images Right --}}
+                <div class="lg:col-span-7 lg:col-start-6">
+                    <div class="grid grid-cols-3 gap-4">
+                        @foreach($images as $image)
+                            <div class="relative aspect-[3/4] rounded-2xl overflow-hidden border border-white/10">
+                                <div class="h-full w-full bg-linear-to-br from-orange-500/20 to-amber-500/20 flex items-center justify-center">
+                                    <div class="text-center p-4">
+                                        <div class="text-3xl mb-2">📸</div>
+                                        <div class="text-zinc-400 text-xs">Tesis</div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent"></div>
-                        </div>
-                    @endforeach
+                        @endforeach
+                    </div>
                 </div>
             </div>
         </div>
