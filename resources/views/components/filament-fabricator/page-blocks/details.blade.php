@@ -11,38 +11,51 @@
 
 @aware(['page'])
 
-<section class="py-16 md:py-32 relative">
-    <div class="container mx-auto px-6">
-        <div class="max-w-5xl mx-auto">
-            <h3 class="text-4xl font-bold mb-12">{{ $title }}</h3>
-            <div class="grid md:grid-cols-2 gap-6">
+<section class="relative min-h-screen flex items-center overflow-hidden border-t border-white/5">
+    <div class="absolute inset-0 bg-zinc-950"></div>
+    
+    {{-- Large decorative number --}}
+    <div class="absolute top-1/2 right-0 -translate-y-1/2 text-[30rem] font-black text-white/5 leading-none select-none">
+        05
+    </div>
+    
+    <div class="relative container mx-auto px-6 py-20 md:py-32">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-12 lg:mb-16">
+                <div class="w-16 h-px bg-linear-to-r from-orange-500 to-transparent mb-6"></div>
+                <h2 class="text-5xl md:text-6xl lg:text-7xl font-black leading-tight">
+                    <span class="block text-white">{{ $title }}</span>
+                </h2>
+            </div>
+            
+            <div class="space-y-4 max-w-4xl">
                 @if(!empty($advantages))
-                    @foreach($advantages as $index => $advantage)
-                        <div class="flex gap-4 p-6 rounded-2xl bg-white/5 border border-white/10 {{ $index === count($advantages) - 1 && count($advantages) % 2 === 1 ? 'md:col-span-2' : '' }}">
-                            <div class="shrink-0 w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center text-xs font-bold">✓</div>
-                            <p class="text-zinc-300">{{ $advantage }}</p>
+                    @foreach($advantages as $advantage)
+                        <div class="flex items-start gap-4 p-6 rounded-2xl border border-white/10 hover:border-orange-500/50 transition-all duration-300">
+                            <div class="mt-1 w-1.5 h-1.5 rounded-full bg-orange-500 shrink-0"></div>
+                            <p class="text-lg text-zinc-200">{{ $advantage }}</p>
                         </div>
                     @endforeach
                 @else
-                    <div class="flex gap-4 p-6 rounded-2xl bg-white/5 border border-white/10">
-                        <div class="shrink-0 w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center text-xs font-bold">✓</div>
-                        <p class="text-zinc-300">Yoğun servis saatlerinde hızlı ve stabil performans</p>
+                    <div class="flex items-start gap-4 p-6 rounded-2xl border border-white/10 hover:border-orange-500/50 transition-all duration-300">
+                        <div class="mt-1 w-1.5 h-1.5 rounded-full bg-orange-500 shrink-0"></div>
+                        <p class="text-lg text-zinc-200">Yoğun servis saatlerinde hızlı ve stabil performans</p>
                     </div>
-                    <div class="flex gap-4 p-6 rounded-2xl bg-white/5 border border-white/10">
-                        <div class="shrink-0 w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center text-xs font-bold">✓</div>
-                        <p class="text-zinc-300">Otel ve restoran mutfaklarında sürdürülebilir kalite</p>
+                    <div class="flex items-start gap-4 p-6 rounded-2xl border border-white/10 hover:border-orange-500/50 transition-all duration-300">
+                        <div class="mt-1 w-1.5 h-1.5 rounded-full bg-orange-500 shrink-0"></div>
+                        <p class="text-lg text-zinc-200">Otel ve restoran mutfaklarında sürdürülebilir kalite</p>
                     </div>
-                    <div class="flex gap-4 p-6 rounded-2xl bg-white/5 border border-white/10">
-                        <div class="shrink-0 w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center text-xs font-bold">✓</div>
-                        <p class="text-zinc-300">Catering firmalarında daha düşük fire, daha yüksek verim</p>
+                    <div class="flex items-start gap-4 p-6 rounded-2xl border border-white/10 hover:border-orange-500/50 transition-all duration-300">
+                        <div class="mt-1 w-1.5 h-1.5 rounded-full bg-orange-500 shrink-0"></div>
+                        <p class="text-lg text-zinc-200">Catering firmalarında daha düşük fire, daha yüksek verim</p>
                     </div>
-                    <div class="flex gap-4 p-6 rounded-2xl bg-white/5 border border-white/10">
-                        <div class="shrink-0 w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center text-xs font-bold">✓</div>
-                        <p class="text-zinc-300">Premium restoranlar için ideal ürün standardı</p>
+                    <div class="flex items-start gap-4 p-6 rounded-2xl border border-white/10 hover:border-orange-500/50 transition-all duration-300">
+                        <div class="mt-1 w-1.5 h-1.5 rounded-full bg-orange-500 shrink-0"></div>
+                        <p class="text-lg text-zinc-200">Premium restoranlar için ideal ürün standardı</p>
                     </div>
-                    <div class="flex gap-4 p-6 rounded-2xl bg-white/5 border border-white/10 md:col-span-2">
-                        <div class="shrink-0 w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center text-xs font-bold">✓</div>
-                        <p class="text-zinc-300">Menü standardizasyonu için her lokmada aynı kalite güvencesi</p>
+                    <div class="flex items-start gap-4 p-6 rounded-2xl border border-white/10 hover:border-orange-500/50 transition-all duration-300">
+                        <div class="mt-1 w-1.5 h-1.5 rounded-full bg-orange-500 shrink-0"></div>
+                        <p class="text-lg text-zinc-200">Menü standardizasyonu için her lokmada aynı kalite güvencesi</p>
                     </div>
                 @endif
             </div>

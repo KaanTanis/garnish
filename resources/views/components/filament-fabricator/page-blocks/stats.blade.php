@@ -9,34 +9,41 @@
 
 @aware(['page'])
 
-<section class="border-y border-white/5 backdrop-blur-sm bg-white/5">
-    <div class="container mx-auto px-6 py-12">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            @if(!empty($stats))
-                @foreach($stats as $stat)
-                    <div>
-                        <div class="text-4xl font-bold text-orange-500 mb-2">{{ $stat['value'] ?? '' }}</div>
-                        <div class="text-sm text-zinc-400">{{ $stat['label'] ?? '' }}</div>
+<section class="relative py-20 md:py-32 border-y border-white/5">
+    <div class="absolute inset-0 bg-zinc-950"></div>
+    <div class="relative container mx-auto px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
+                @if(!empty($stats))
+                    @foreach($stats as $stat)
+                        <div class="text-center">
+                            <div class="text-5xl md:text-6xl lg:text-7xl font-black text-orange-500 mb-3 leading-none">
+                                {{ $stat['value'] ?? '' }}
+                            </div>
+                            <div class="text-sm md:text-base text-zinc-300 uppercase tracking-wider">
+                                {{ $stat['label'] ?? '' }}
+                            </div>
+                        </div>
+                    @endforeach
+                @else
+                    <div class="text-center">
+                        <div class="text-5xl md:text-6xl lg:text-7xl font-black text-orange-500 mb-3 leading-none">100%</div>
+                        <div class="text-sm md:text-base text-zinc-300 uppercase tracking-wider">Tavuk Göğsü</div>
                     </div>
-                @endforeach
-            @else
-                <div>
-                    <div class="text-4xl font-bold text-orange-500 mb-2">100%</div>
-                    <div class="text-sm text-zinc-400">Tavuk Göğsü</div>
-                </div>
-                <div>
-                    <div class="text-4xl font-bold text-orange-500 mb-2">0%</div>
-                    <div class="text-sm text-zinc-400">MDM İçeriği</div>
-                </div>
-                <div>
-                    <div class="text-4xl font-bold text-orange-500 mb-2">Şef</div>
-                    <div class="text-sm text-zinc-400">Tarifleri</div>
-                </div>
-                <div>
-                    <div class="text-4xl font-bold text-orange-500 mb-2">Modern</div>
-                    <div class="text-sm text-zinc-400">Üretim Tesisi</div>
-                </div>
-            @endif
+                    <div class="text-center">
+                        <div class="text-5xl md:text-6xl lg:text-7xl font-black text-orange-500 mb-3 leading-none">0%</div>
+                        <div class="text-sm md:text-base text-zinc-300 uppercase tracking-wider">MDM İçeriği</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-5xl md:text-6xl lg:text-7xl font-black text-orange-500 mb-3 leading-none">Şef</div>
+                        <div class="text-sm md:text-base text-zinc-300 uppercase tracking-wider">Tarifleri</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-5xl md:text-6xl lg:text-7xl font-black text-orange-500 mb-3 leading-none">Modern</div>
+                        <div class="text-sm md:text-base text-zinc-300 uppercase tracking-wider">Üretim Tesisi</div>
+                    </div>
+                @endif
+            </div>
         </div>
     </div>
 </section>

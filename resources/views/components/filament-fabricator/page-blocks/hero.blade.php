@@ -11,10 +11,15 @@
 ])
 
 <section id="hero" class="relative min-h-screen flex items-center overflow-hidden">
-    <div class="absolute inset-0 bg-linear-to-br from-zinc-950 via-orange-950/20 to-amber-800/40"></div>
+    <div class="absolute inset-0 bg-zinc-950"></div>
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.08),transparent_45%),radial-gradient(circle_at_80%_0%,rgba(255,153,102,0.2),transparent_35%),radial-gradient(circle_at_60%_70%,rgba(255,255,255,0.04),transparent_40%)]"></div>
-    <div class="pointer-events-none absolute inset-y-0 right-0 w-full sm:w-full scale-x-[-1] md:scale-0 lg:w-[55%] bg-no-repeat bg-cover bg-center  blur-none 2xl:blur-3xl" style="background-image: url({{ asset('temp/hero.jpeg') }})"></div>
+    <div class="pointer-events-none absolute inset-y-0 right-0 w-full sm:w-full scale-x-[-1] md:scale-0 lg:w-[55%] bg-no-repeat bg-cover bg-center blur-none 2xl:blur-3xl" style="background-image: url({{ asset('temp/hero.jpeg') }})"></div>
     <div class="absolute inset-0 bg-linear-to-r from-zinc-950/60 via-zinc-950/80 to-transparent"></div>
+    
+    {{-- Large decorative number --}}
+    <div class="absolute top-1/2 right-0 -translate-y-1/2 text-[30rem] font-black text-white/5 leading-none select-none hidden lg:block">
+        01
+    </div>
 
     <div class="relative container mx-auto px-6 pt-28 pb-16 lg:py-28">
         <div class="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-14 items-center">

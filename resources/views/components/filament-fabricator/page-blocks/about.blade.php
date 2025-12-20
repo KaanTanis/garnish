@@ -12,86 +12,67 @@
 
 @aware(['page'])
 
-<section id="about" class="py-16 md:py-32 relative">
-    <div class="absolute inset-0 bg-linear-to-b from-zinc-950 via-orange-950/10 to-zinc-950"></div>
-    <div class="relative container mx-auto px-6">
-        <div class="max-w-6xl mx-auto relative">
-            <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-                {{-- Big visual: happy bite moment --}}
-                <div class="order-1 lg:order-2" data-about-visual>
-                    <div class="relative overflow-hidden rounded-4xl border border-white/15 bg-white/5 backdrop-blur-sm shadow-[0_32px_100px_rgba(0,0,0,0.85)]">
-                        <div class="aspect-5/6 sm:aspect-square bg-no-repeat bg-cover bg-center"
-                                style="background-image: url('{{ asset('temp/paket/sinitzel1.jpg') }}');">
+<section id="about" class="relative min-h-screen flex items-center overflow-hidden border-t border-white/5">
+    <div class="absolute inset-0 bg-zinc-950"></div>
+    
+    {{-- Large decorative number --}}
+    <div class="absolute top-1/2 right-0 -translate-y-1/2 text-[30rem] font-black text-white/5 leading-none select-none">
+        02
+    </div>
+    
+    <div class="relative container mx-auto px-6 py-20 md:py-32">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+                {{-- Copy Left --}}
+                <div class="lg:col-span-7">
+                    <div class="mb-6">
+                        <div class="w-16 h-px bg-linear-to-r from-orange-500 to-transparent mb-6"></div>
+                        <div class="inline-block mb-6 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-orange-300 text-sm font-medium uppercase tracking-wider">
+                            {{ $badge }}
                         </div>
-                        <div class="absolute inset-0 bg-linear-to-t from-black/65 via-black/30 to-transparent"></div>
+                        <h2 class="text-5xl md:text-6xl lg:text-7xl font-black leading-tight mb-8">
+                            <span class="block text-white">{{ $title_1 }}</span>
+                            <span class="block text-orange-500">{{ $title_2 }}</span>
+                        </h2>
+                    </div>
 
-                        <div class="absolute top-4 left-4 flex flex-wrap gap-2">
-                            <div class="px-3 py-1.5 rounded-full bg-black/60 border border-white/20 text-[11px] font-semibold uppercase tracking-[0.18em] text-orange-100">
-                                Mutlu çıtır an
-                            </div>
-                            <div class="px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-[11px] font-semibold text-orange-100 hidden sm:block">
-                                FROCHI · Ev konforunda restoran keyfi
-                            </div>
+                    <div class="space-y-6 text-lg md:text-xl text-zinc-300 leading-relaxed mb-8">
+                        <p>{{ $paragraph_1 }}</p>
+                        <p class="text-xl md:text-2xl font-semibold text-white">
+                            Frochi olarak amacımız, {{ $paragraph_2 }}
+                        </p>
+                        <p>{{ $paragraph_3 }}</p>
+                    </div>
+
+                    <div class="space-y-3 pt-4">
+                        <div class="flex items-start gap-3">
+                            <div class="mt-2 w-1.5 h-1.5 rounded-full bg-orange-500 shrink-0"></div>
+                            <span class="text-lg text-zinc-200">{{ $feature_1 }}</span>
                         </div>
-
-                        <div class="absolute bottom-4 left-4 right-4">
-                            <div class="px-4 py-3 rounded-2xl bg-black/70 border border-white/15 flex items-center justify-between gap-3">
-                                <div>
-                                    <div class="text-xs text-orange-200/90 uppercase tracking-[0.16em] mb-1">Hayatın koşturmacası</div>
-                                    <p class="text-sm text-zinc-100">
-                                        Vakit az olduğunda bile, sofraya koyduğunuz her tabakta aynı güven ve lezzet.
-                                    </p>
-                                </div>
-                                <div class="hidden sm:flex flex-col items-end gap-1 text-right">
-                                    <span class="text-xs text-zinc-400">Hazırlık</span>
-                                    <span class="text-sm font-semibold text-orange-200">Dakikalar içinde</span>
-                                </div>
-                            </div>
+                        <div class="flex items-start gap-3">
+                            <div class="mt-2 w-1.5 h-1.5 rounded-full bg-orange-500 shrink-0"></div>
+                            <span class="text-lg text-zinc-200">{{ $feature_2 }}</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="mt-2 w-1.5 h-1.5 rounded-full bg-orange-500 shrink-0"></div>
+                            <span class="text-lg text-zinc-200">{{ $feature_3 }}</span>
                         </div>
                     </div>
                 </div>
 
-                {{-- Copy --}}
-                <div class="order-2 lg:order-1 text-lg text-zinc-400 leading-relaxed space-y-8">
-                    <div>
-                        <div class="inline-block mb-4 px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-500 text-sm font-medium">
-                            {{ $badge }}
-                        </div>
-                        <h2 class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-4">
-                            {{ $title_1 }}<br>
-                            <span class="text-orange-500">{{ $title_2 }}</span>
-                        </h2>
-                    </div>
-
-                    <div class="space-y-5">
-                        <p>
-                            {{ $paragraph_1 }}
-                        </p>
-                        <p>
-                            <span class="text-white font-semibold">Frochi olarak amacımız</span>, {{ $paragraph_2 }}
-                        </p>
-                        <p>
-                            {{ $paragraph_3 }}
-                        </p>
-                    </div>
-
-                    <div class="grid sm:grid-cols-3 gap-4 pt-4">
-                        <div class="flex items-start gap-3">
-                            <div class="mt-1 w-2 h-2 rounded-full bg-orange-500"></div>
-                            <div>
-                                <div class="text-white text-sm font-semibold">{{ $feature_1 }}</div>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <div class="mt-1 w-2 h-2 rounded-full bg-orange-500"></div>
-                            <div>
-                                <div class="text-white text-sm font-semibold">{{ $feature_2 }}</div>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <div class="mt-1 w-2 h-2 rounded-full bg-orange-500"></div>
-                            <div>
-                                <div class="text-white text-sm font-semibold">{{ $feature_3 }}</div>
+                {{-- Visual Right --}}
+                <div class="lg:col-span-5 lg:col-start-8" data-about-visual>
+                    <div class="relative aspect-[3/4] rounded-3xl overflow-hidden border border-white/10">
+                        <img 
+                            src="{{ asset('temp/paket/sinitzel1.jpg') }}" 
+                            alt="FROCHI" 
+                            class="h-full w-full object-cover"
+                        >
+                        <div class="absolute inset-0 bg-linear-to-t from-black/70 via-black/30 to-transparent"></div>
+                        
+                        <div class="absolute top-6 left-6">
+                            <div class="px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-semibold text-orange-200 uppercase tracking-wider">
+                                Mutlu çıtır an
                             </div>
                         </div>
                     </div>
