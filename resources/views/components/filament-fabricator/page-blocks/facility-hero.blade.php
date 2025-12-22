@@ -6,7 +6,7 @@
 
 @aware(['page'])
 
-<section class="relative min-h-screen flex items-center overflow-hidden">
+<section class="relative min-h-screen flex items-center overflow-hidden pt-8">
     <div class="absolute inset-0 bg-zinc-950"></div>
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,153,102,0.05),transparent_70%)]"></div>
     

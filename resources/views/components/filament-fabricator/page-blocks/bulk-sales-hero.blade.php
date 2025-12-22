@@ -7,7 +7,7 @@
 
 @aware(['page'])
 
-<section class="relative min-h-screen flex items-center overflow-hidden">
+<section class="relative min-h-screen flex items-center overflow-hidden pt-8">
     {{-- Orange gradient background --}}
     <div class="absolute inset-0 bg-linear-to-br from-orange-600 via-amber-600 to-orange-700"></div>
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,0,0,0.1),transparent_70%)]"></div>

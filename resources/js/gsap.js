@@ -79,12 +79,12 @@ const initHero = () => {
     tl.fromTo(
         hero.querySelectorAll("[data-hero-copy] > *"),
         { y: 20, opacity: 0 },
-        { y: 0, opacity: 1, stagger: 0.1, duration: 0.7 }
+        { y: 0, opacity: 1, stagger: 0.4, duration: 0.6 }
     ).fromTo(
         hero.querySelectorAll("[data-hero-ctas] > *"),
         { y: 20, opacity: 0 },
-        { y: 0, opacity: 1, stagger: 0.2, duration: 0.1 },
-        "-=0.4"
+        { y: 0, opacity: 1, stagger: 0.23, duration: 0.2 },
+        "-=0.3"
     );
 
     hero.querySelectorAll("[data-parallax]").forEach((el) => {

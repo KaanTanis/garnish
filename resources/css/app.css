@@ -7,10 +7,12 @@
 
 @plugin "daisyui";
 
-@plugin "daisyui" {
-    themes: light --default;
+@plugin "daisyui/theme" {
+    name: "light";
+    default: true;
+    --color-primary: #ff6900;
+    --color-secondary: teal;
 }
-
 @layer base {
     @font-face {
         font-family: "Gilroy";
