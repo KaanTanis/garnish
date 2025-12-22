@@ -63,25 +63,46 @@
             x-transition.scale.y
         >
             <div class="mt-3 pt-3 border-t border-white/10 flex flex-col gap-1 text-sm">
-                <a href="{{ url('/') }}" class="px-1 py-2 rounded-lg hover:bg-white/5 hover:text-orange-300 transition-colors" x-on:click="open = false">
+                <a href="{{ url('/') }}" @class([
+                    'px-1 py-2 rounded-lg hover:bg-white/5 hover:text-orange-300 transition-colors',
+                    'text-orange-400' => request()->is('/'),
+                ]) x-on:click="open = false">
                     Ana Sayfa
                 </a>
-                <a href="{{ route('page', ['filamentFabricatorPage' => 'hakkimizda']) }}" class="px-1 py-2 rounded-lg hover:bg-white/5 hover:text-orange-300 transition-colors" x-on:click="open = false">
+                <a href="{{ route('page', ['filamentFabricatorPage' => 'hakkimizda']) }}" @class([
+                    'px-1 py-2 rounded-lg hover:bg-white/5 hover:text-orange-300 transition-colors',
+                    'text-orange-400' => request()->is('hakkimizda'),
+                ]) x-on:click="open = false">
                     Hakkımızda
                 </a>
-                <a href="{{ route('page', ['filamentFabricatorPage' => 'urunlerimiz']) }}" class="px-1 py-2 rounded-lg hover:bg-white/5 hover:text-orange-300 transition-colors" x-on:click="open = false">
+                <a href="{{ route('page', ['filamentFabricatorPage' => 'urunlerimiz']) }}" @class([
+                    'px-1 py-2 rounded-lg hover:bg-white/5 hover:text-orange-300 transition-colors',
+                    'text-orange-400' => request()->is('urunlerimiz'),
+                ]) x-on:click="open = false">
                     Ürünler
                 </a>
-                <a href="{{ route('page', ['filamentFabricatorPage' => 'uretim-tesisimiz']) }}" class="px-1 py-2 rounded-lg hover:bg-white/5 hover:text-orange-300 transition-colors" x-on:click="open = false">
+                <a href="{{ route('page', ['filamentFabricatorPage' => 'uretim-tesisimiz']) }}" @class([
+                    'px-1 py-2 rounded-lg hover:bg-white/5 hover:text-orange-300 transition-colors',
+                    'text-orange-400' => request()->is('uretim-tesisimiz'),
+                ]) x-on:click="open = false">
                     Üretim Tesisimiz
                 </a>
-                <a href="{{ route('page', ['filamentFabricatorPage' => 'toplu-satis']) }}" class="px-1 py-2 rounded-lg hover:bg-white/5 hover:text-orange-300 transition-colors" x-on:click="open = false">
+                <a href="{{ route('page', ['filamentFabricatorPage' => 'toplu-satis']) }}" @class([
+                    'px-1 py-2 rounded-lg hover:bg-white/5 hover:text-orange-300 transition-colors',
+                    'text-orange-400' => request()->is('toplu-satis'),
+                ]) x-on:click="open = false">
                     Toplu Satış
                 </a>
-                <a href="{{ route('page', ['filamentFabricatorPage' => 'kalite-guven']) }}" class="px-1 py-2 rounded-lg hover:bg-white/5 hover:text-orange-300 transition-colors" x-on:click="open = false">
+                <a href="{{ route('page', ['filamentFabricatorPage' => 'kalite-guven']) }}" @class([
+                    'px-1 py-2 rounded-lg hover:bg-white/5 hover:text-orange-300 transition-colors',
+                    'text-orange-400' => request()->is('kalite-guven'),
+                ]) x-on:click="open = false">
                     Kalite & Güven
                 </a>
-                <a href="{{ route('page', ['filamentFabricatorPage' => 'iletisim']) }}" class="px-1 py-2 rounded-lg hover:bg-white/5 hover:text-orange-300 transition-colors" x-on:click="open = false">
+                <a href="{{ route('page', ['filamentFabricatorPage' => 'iletisim']) }}" @class([
+                    'px-1 py-2 rounded-lg hover:bg-white/5 hover:text-orange-300 transition-colors',
+                    'text-orange-400' => request()->is('iletisim'),
+                ]) x-on:click="open = false">
                     İletişim
                 </a>
             </div>
