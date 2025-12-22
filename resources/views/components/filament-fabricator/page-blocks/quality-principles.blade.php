@@ -22,7 +22,7 @@
 
 @aware(['page'])
 
-<section class="relative min-h-screen flex items-center overflow-hidden border-t border-white/5">
+<section class="relative min-h-screen flex items-center overflow-hidden border-t border-white/5 px-4">
     <div class="absolute inset-0 bg-zinc-950"></div>
     
     {{-- Large decorative number --}}
