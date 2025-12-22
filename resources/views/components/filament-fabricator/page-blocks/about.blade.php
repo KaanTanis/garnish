@@ -30,7 +30,7 @@
                         <div class="inline-block mb-6 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-orange-300 text-sm font-medium uppercase tracking-wider">
                             {{ $badge }}
                         </div>
-                        <h2 class="text-5xl md:text-6xl lg:text-7xl font-black leading-tight mb-8">
+                        <h2 class="text-4xl md:text-6xl lg:text-7xl font-black leading-tight mb-8">
                             <span class="block text-white">{{ $title_1 }}</span>
                             <span class="block text-orange-500">{{ $title_2 }}</span>
                         </h2>
@@ -62,7 +62,7 @@
 
                 {{-- Visual Right --}}
                 <div class="lg:col-span-5 lg:col-start-8" data-about-visual>
-                    <div class="relative aspect-[3/4] rounded-3xl overflow-hidden border border-white/10">
+                    <div class="relative aspect-3/4 rounded-3xl overflow-hidden border border-white/10">
                         <img 
                             src="{{ asset('temp/paket/sinitzel1.jpg') }}" 
                             alt="FROCHI" 

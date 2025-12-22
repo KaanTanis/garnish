@@ -78,12 +78,12 @@ const initHero = () => {
 
     tl.fromTo(
         hero.querySelectorAll("[data-hero-copy] > *"),
-        { y: 40, opacity: 0 },
-        { y: 0, opacity: 1, stagger: 0.08, duration: 0.9 }
+        { y: 20, opacity: 0 },
+        { y: 0, opacity: 1, stagger: 0.1, duration: 0.7 }
     ).fromTo(
         hero.querySelectorAll("[data-hero-ctas] > *"),
         { y: 20, opacity: 0 },
-        { y: 0, opacity: 1, stagger: 0.08, duration: 0.7 },
+        { y: 0, opacity: 1, stagger: 0.2, duration: 0.1 },
         "-=0.4"
     );
 

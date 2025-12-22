@@ -56,12 +56,12 @@
                     </div>
 
                     <div class="grid grid-cols-2 gap-3 max-w-md">
-                        <div class="rounded-2xl bg-white/5 border border-white/10 px-4 py-3 backdrop-blur">
+                        <div class="rounded-2xl bg-white/5 border border-white/10 px-4 py-3 backdrop-blur-xl">
                             <div class="text-xs text-zinc-200 uppercase tracking-[0.16em] mb-1">İçerik</div>
                             <div class="text-sm font-semibold text-orange-200">100% tavuk göğsü</div>
                             <div class="text-xs text-zinc-200">0% MDM · Temiz içerik</div>
                         </div>
-                        <div class="rounded-2xl bg-white/5 border border-white/10 px-4 py-3 backdrop-blur">
+                        <div class="rounded-2xl bg-white/5 border border-white/10 px-4 py-3 backdrop-blur-xl">
                             <div class="text-xs text-zinc-200 uppercase tracking-[0.16em] mb-1">Kullanım</div>
                             <div class="text-sm font-semibold text-orange-200">Dakikalar içinde hazır</div>
                             <div class="text-xs text-zinc-200">Ev & profesyonel mutfak uyumlu</div>
