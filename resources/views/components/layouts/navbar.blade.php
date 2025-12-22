@@ -1,45 +1,48 @@
+@php
+$menu = [
+    ['label' => 'Hakkımızda', 'slug' => 'hakkimizda'],
+    ['label' => 'Ürünler', 'slug' => 'urunlerimiz'],
+    ['label' => 'Üretim Tesisimiz', 'slug' => 'uretim-tesisimiz'],
+    ['label' => 'Toplu Satış', 'slug' => 'toplu-satis'],
+    ['label' => 'Kalite & Güven', 'slug' => 'kalite-guven'],
+    ['label' => 'İletişim', 'slug' => 'iletisim'],
+];
+@endphp
+
 <nav
     x-data="{ open: false }"
-    class="fixed inset-x-4 top-4 md:top-6 md:left-1/2 md:-translate-x-1/2 md:inset-x-auto z-50"
+    x-effect="document.body.classList.toggle('overflow-hidden', open)"
+    class="fixed inset-x-4 top-4 lg:top-6 lg:left-1/2 lg:-translate-x-1/2 lg:inset-x-auto z-50"
 >
-    <div class="backdrop-blur-xl bg-zinc-950/70 border border-white/10 rounded-2xl md:rounded-full px-5 md:px-8 py-3 md:py-4 shadow-lg shadow-black/30">
+    <div class="backdrop-blur-lg bg-zinc-950/70 border border-white/10 rounded-2xl lg:rounded-full px-5 lg:px-10 py-3 lg:py-4 shadow-lg shadow-black/30
++             lg:min-w-[760px] xl:min-w-[900px]">
         <div class="flex items-center justify-between gap-4">
+            <!-- Logo -->
             <a href="{{ url('/') }}" class="flex items-center gap-2">
-                <span class="text-xl font-bold bg-linear-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent">
+                <span class="text-2xl font-bold tracking-wide bg-linear-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent drop-shadow-sm">
                     FROCHI
                 </span>
             </a>
 
-            <div class="hidden md:flex items-center gap-6 text-sm">
-                <a href="{{ route('page', ['filamentFabricatorPage' => 'hakkimizda']) }}" @class([
-                        'hover:text-orange-400 transition-colors',
-                        'text-orange-400' => request()->is('hakkimizda'),
-                    ])>Hakkımızda</a>
-                <a href="{{ route('page', ['filamentFabricatorPage' => 'urunlerimiz']) }}" @class([
-                    'hover:text-orange-400 transition-colors',
-                    'text-orange-400' => request()->is('urunlerimiz'),
-                ])>Ürünler</a>
-                <a href="{{ route('page', ['filamentFabricatorPage' => 'uretim-tesisimiz']) }}" @class([
-                    'hover:text-orange-400 transition-colors',
-                    'text-orange-400' => request()->is('uretim-tesisimiz'),
-                ])>Üretim Tesisimiz</a>
-                <a href="{{ route('page', ['filamentFabricatorPage' => 'toplu-satis']) }}" @class([
-                    'hover:text-orange-400 transition-colors',
-                    'text-orange-400' => request()->is('toplu-satis'),
-                ])>Toplu Satış</a>
-                <a href="{{ route('page', ['filamentFabricatorPage' => 'kalite-guven']) }}" @class([
-                    'hover:text-orange-400 transition-colors',
-                    'text-orange-400' => request()->is('kalite-guven'),
-                ])>Kalite & Güven</a>
-                <a href="{{ route('page', ['filamentFabricatorPage' => 'iletisim']) }}" @class([
-                    'hover:text-orange-400 transition-colors',
-                    'text-orange-400' => request()->is('iletisim'),
-                ])>Bize Ulaşın</a>
+            <!-- Desktop menu (SADECE lg+) -->
+            <div class="hidden lg:flex items-center gap-6 text-sm">
+                @foreach($menu as $item)
+                    <a
+                        href="{{ route('page', ['filamentFabricatorPage' => $item['slug']]) }}"
+                        @class([
+                            'hover:text-orange-400 transition-colors',
+                            'text-orange-400' => request()->is($item['slug']),
+                        ])
+                    >
+                        {{ $item['label'] }}
+                    </a>
+                @endforeach
             </div>
 
+            <!-- Hamburger (mobil + tablet) -->
             <button
                 type="button"
-                class="md:hidden inline-flex items-center justify-center w-9 h-9 rounded-full border border-white/15 bg-white/5 hover:bg-white/10 transition-colors"
+                class="lg:hidden inline-flex items-center justify-center w-9 h-9 rounded-full border border-white/15 bg-white/5 hover:bg-white/10 transition-colors"
                 x-on:click="open = !open"
                 aria-label="Menü"
             >
@@ -56,55 +59,31 @@
             </button>
         </div>
 
+        <!-- Mobil / Tablet Menu -->
         <div
-            class="md:hidden origin-top transition-all duration-200 ease-out"
+            class="lg:hidden origin-top"
             x-cloak
             x-show="open"
-            x-transition.scale.y
+            x-transition:enter="transition ease-out duration-200"
+            x-transition:enter-start="opacity-0 scale-95"
+            x-transition:enter-end="opacity-100 scale-100"
+            x-transition:leave="transition ease-in duration-150"
+            x-transition:leave-start="opacity-100 scale-100"
+            x-transition:leave-end="opacity-0 scale-95"
         >
             <div class="mt-3 pt-3 border-t border-white/10 flex flex-col gap-1 text-sm">
-                <a href="{{ url('/') }}" @class([
-                    'px-1 py-2 rounded-lg hover:bg-white/5 hover:text-orange-300 transition-colors',
-                    'text-orange-400' => request()->is('/'),
-                ]) x-on:click="open = false">
-                    Ana Sayfa
-                </a>
-                <a href="{{ route('page', ['filamentFabricatorPage' => 'hakkimizda']) }}" @class([
-                    'px-1 py-2 rounded-lg hover:bg-white/5 hover:text-orange-300 transition-colors',
-                    'text-orange-400' => request()->is('hakkimizda'),
-                ]) x-on:click="open = false">
-                    Hakkımızda
-                </a>
-                <a href="{{ route('page', ['filamentFabricatorPage' => 'urunlerimiz']) }}" @class([
-                    'px-1 py-2 rounded-lg hover:bg-white/5 hover:text-orange-300 transition-colors',
-                    'text-orange-400' => request()->is('urunlerimiz'),
-                ]) x-on:click="open = false">
-                    Ürünler
-                </a>
-                <a href="{{ route('page', ['filamentFabricatorPage' => 'uretim-tesisimiz']) }}" @class([
-                    'px-1 py-2 rounded-lg hover:bg-white/5 hover:text-orange-300 transition-colors',
-                    'text-orange-400' => request()->is('uretim-tesisimiz'),
-                ]) x-on:click="open = false">
-                    Üretim Tesisimiz
-                </a>
-                <a href="{{ route('page', ['filamentFabricatorPage' => 'toplu-satis']) }}" @class([
-                    'px-1 py-2 rounded-lg hover:bg-white/5 hover:text-orange-300 transition-colors',
-                    'text-orange-400' => request()->is('toplu-satis'),
-                ]) x-on:click="open = false">
-                    Toplu Satış
-                </a>
-                <a href="{{ route('page', ['filamentFabricatorPage' => 'kalite-guven']) }}" @class([
-                    'px-1 py-2 rounded-lg hover:bg-white/5 hover:text-orange-300 transition-colors',
-                    'text-orange-400' => request()->is('kalite-guven'),
-                ]) x-on:click="open = false">
-                    Kalite & Güven
-                </a>
-                <a href="{{ route('page', ['filamentFabricatorPage' => 'iletisim']) }}" @class([
-                    'px-1 py-2 rounded-lg hover:bg-white/5 hover:text-orange-300 transition-colors',
-                    'text-orange-400' => request()->is('iletisim'),
-                ]) x-on:click="open = false">
-                    İletişim
-                </a>
+                @foreach($menu as $item)
+                    <a
+                        href="{{ route('page', ['filamentFabricatorPage' => $item['slug']]) }}"
+                        @class([
+                            'px-2 py-2 rounded-lg hover:bg-white/5 hover:text-orange-300 transition-colors',
+                            'text-orange-400' => request()->is($item['slug']),
+                        ])
+                        x-on:click="open = false"
+                    >
+                        {{ $item['label'] }}
+                    </a>
+                @endforeach
             </div>
         </div>
     </div>
