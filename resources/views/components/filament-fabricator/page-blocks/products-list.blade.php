@@ -41,7 +41,7 @@
         @endphp
         
         {{-- Full Width Product Section --}}
-        <div class="relative min-h-screen flex items-center overflow-hidden {{ $index > 0 ? 'border-t border-white/5' : '' }}">
+        <div class="relative min-h-screen flex items-center overflow-hidden px-2 {{ $index > 0 ? 'border-t border-white/5' : '' }}">
             {{-- Background Image --}}
             <div class="absolute inset-0">
                 <div class="absolute inset-0 bg-linear-to-r {{ $isEven ? 'from-zinc-950 via-zinc-950/95 to-transparent' : 'from-transparent via-zinc-950/95 to-zinc-950' }}"></div>

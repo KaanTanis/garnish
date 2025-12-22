@@ -11,12 +11,30 @@
             </a>
 
             <div class="hidden md:flex items-center gap-6 text-sm">
-                <a href="{{ route('page', ['filamentFabricatorPage' => 'hakkimizda']) }}" class="hover:text-orange-400 transition-colors">Hakkımızda</a>
-                <a href="{{ route('page', ['filamentFabricatorPage' => 'urunlerimiz']) }}" class="hover:text-orange-400 transition-colors">Ürünler</a>
-                <a href="{{ route('page', ['filamentFabricatorPage' => 'uretim-tesisimiz']) }}" class="hover:text-orange-400 transition-colors">Üretim Tesisimiz</a>
-                <a href="{{ route('page', ['filamentFabricatorPage' => 'toplu-satis']) }}" class="hover:text-orange-400 transition-colors">Toplu Satış</a>
-                <a href="{{ route('page', ['filamentFabricatorPage' => 'kalite-guven']) }}" class="hover:text-orange-400 transition-colors">Kalite & Güven</a>
-                <a href="{{ route('page', ['filamentFabricatorPage' => 'iletisim']) }}" class="hover:text-orange-400 transition-colors">Bize Ulaşın</a>
+                <a href="{{ route('page', ['filamentFabricatorPage' => 'hakkimizda']) }}" @class([
+                        'hover:text-orange-400 transition-colors',
+                        'text-orange-400' => request()->is('hakkimizda'),
+                    ])>Hakkımızda</a>
+                <a href="{{ route('page', ['filamentFabricatorPage' => 'urunlerimiz']) }}" @class([
+                    'hover:text-orange-400 transition-colors',
+                    'text-orange-400' => request()->is('urunlerimiz'),
+                ])>Ürünler</a>
+                <a href="{{ route('page', ['filamentFabricatorPage' => 'uretim-tesisimiz']) }}" @class([
+                    'hover:text-orange-400 transition-colors',
+                    'text-orange-400' => request()->is('uretim-tesisimiz'),
+                ])>Üretim Tesisimiz</a>
+                <a href="{{ route('page', ['filamentFabricatorPage' => 'toplu-satis']) }}" @class([
+                    'hover:text-orange-400 transition-colors',
+                    'text-orange-400' => request()->is('toplu-satis'),
+                ])>Toplu Satış</a>
+                <a href="{{ route('page', ['filamentFabricatorPage' => 'kalite-guven']) }}" @class([
+                    'hover:text-orange-400 transition-colors',
+                    'text-orange-400' => request()->is('kalite-guven'),
+                ])>Kalite & Güven</a>
+                <a href="{{ route('page', ['filamentFabricatorPage' => 'iletisim']) }}" @class([
+                    'hover:text-orange-400 transition-colors',
+                    'text-orange-400' => request()->is('iletisim'),
+                ])>Bize Ulaşın</a>
             </div>
 
             <button
