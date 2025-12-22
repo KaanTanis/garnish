@@ -63,12 +63,9 @@
                 {{-- Visual Right --}}
                 <div class="lg:col-span-5 lg:col-start-8">
                     <div class="sticky top-20">
-                        <div class="aspect-[3/4] rounded-3xl overflow-hidden border border-white/10 bg-linear-to-br from-white/5 to-white/0">
+                        <div class="aspect-3/4 rounded-3xl overflow-hidden border border-white/10 bg-linear-to-br from-white/5 to-white/0">
                             <div class="h-full w-full bg-linear-to-br from-orange-500/20 to-amber-500/20 flex items-center justify-center">
-                                <div class="text-center p-12">
-                                    <div class="text-6xl mb-4">✨</div>
-                                    <div class="text-zinc-400 text-sm uppercase tracking-wider">Premium</div>
-                                </div>
+                                <img src="{{ asset('temp/tenders/3.jpeg') }}" alt="" class="object-cover w-full h-full">
                             </div>
                         </div>
                     </div>

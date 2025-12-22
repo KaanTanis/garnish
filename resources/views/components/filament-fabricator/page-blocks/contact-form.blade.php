@@ -16,7 +16,7 @@
     
     <div class="relative container mx-auto px-6 py-20 md:py-32">
         <div class="max-w-7xl mx-auto">
-            <div class="grid lg:grid-cols-12 gap-12 lg:gap-20">
+            <div class="grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
                 {{-- Contact Info Left --}}
                 <div class="lg:col-span-5">
                     <div class="mb-6">
@@ -76,17 +76,10 @@
                     </div>
                 </div>
 
-                {{-- Visual Right --}}
                 <div class="lg:col-span-7 lg:col-start-6">
-                    <div class="sticky top-20">
-                        <div class="aspect-[4/5] rounded-3xl overflow-hidden border border-white/10 bg-linear-to-br from-white/5 to-white/0">
-                            <div class="h-full w-full bg-linear-to-br from-orange-500/20 to-amber-500/20 flex items-center justify-center">
-                                <div class="text-center p-12">
-                                    <div class="text-6xl mb-4">💬</div>
-                                    <div class="text-zinc-400 text-sm uppercase tracking-wider">Mesaj Gönderin</div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="p-8 rounded-3xl border border-white/10 bg-linear-to-br from-white/5 to-white/0">
+                        <h3 class="text-2xl font-bold mb-8 text-white">Mesaj Gönderin</h3>
+                        <livewire:contact-form />
                     </div>
                 </div>
             </div>

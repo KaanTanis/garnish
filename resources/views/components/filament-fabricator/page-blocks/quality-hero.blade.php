@@ -37,10 +37,7 @@
                 <div class="relative">
                     <div class="aspect-square rounded-3xl overflow-hidden border border-white/10">
                         <div class="h-full w-full bg-linear-to-br from-orange-500/20 to-amber-500/20 flex items-center justify-center">
-                            <div class="text-center p-12">
-                                <div class="text-6xl mb-4">🛡️</div>
-                                <div class="text-zinc-400 text-sm uppercase tracking-wider">Kalite</div>
-                            </div>
+                            <img src="{{ asset('temp/hero.jpeg') }}" alt="Quality Hero Image" class="object-cover h-full w-full" />
                         </div>
                     </div>
                     

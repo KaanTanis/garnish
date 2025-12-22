@@ -85,7 +85,7 @@
                 <div class="lg:col-span-7 lg:col-start-6">
                     <div class="p-8 rounded-3xl border border-white/10 bg-linear-to-br from-white/5 to-white/0">
                         <h3 class="text-2xl font-bold mb-8 text-white">Mesaj Gönderin</h3>
-                        {{-- <livewire:contact-form /> --}}
+                        <livewire:contact-form />
                     </div>
                 </div>
             </div>

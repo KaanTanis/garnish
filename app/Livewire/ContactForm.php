@@ -35,7 +35,7 @@ class ContactForm extends Component
 
     public ?string $subtitle = null;
 
-    public function mount($title, $subtitle)
+    public function mount(?string $title = null, ?string $subtitle = null)
     {
         $this->title = $title;
         $this->subtitle = $subtitle;

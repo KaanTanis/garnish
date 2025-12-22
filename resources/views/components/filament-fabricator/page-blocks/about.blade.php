@@ -64,11 +64,11 @@
                 <div class="lg:col-span-5 lg:col-start-8" data-about-visual>
                     <div class="relative aspect-3/4 rounded-3xl overflow-hidden border border-white/10">
                         <img 
-                            src="{{ asset('temp/paket/sinitzel1.jpg') }}" 
+                            src="{{ asset('temp/tenders.jpg') }}" 
                             alt="FROCHI" 
                             class="h-full w-full object-cover"
                         >
-                        <div class="absolute inset-0 bg-linear-to-t from-black/70 via-black/30 to-transparent"></div>
+                        <div class="absolute"></div>
                         
                         <div class="absolute top-6 left-6">
                             <div class="px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-semibold text-orange-200 uppercase tracking-wider">

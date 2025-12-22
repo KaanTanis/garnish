@@ -43,10 +43,7 @@
                 <div class="relative">
                     <div class="aspect-square rounded-3xl overflow-hidden border border-white/20 bg-white/10 backdrop-blur-sm">
                         <div class="h-full w-full bg-linear-to-br from-white/20 to-white/10 flex items-center justify-center">
-                            <div class="text-center p-12">
-                                <div class="text-6xl mb-4">🍽️</div>
-                                <div class="text-white/80 text-sm uppercase tracking-wider">Garnish</div>
-                            </div>
+                            <img src="{{ asset('temp/paket/tenders2.jpg') }}" alt="" class="w-full h-full object-cover">
                         </div>
                     </div>
                     

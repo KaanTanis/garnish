@@ -6,12 +6,14 @@
             'description' => 'Çıtır doku, sulu iç yapı, dengeli baharat.',
             'features' => ['Çıtır doku', 'Sulu iç yapı', 'Dengeli baharat'],
             'image' => '/temp/paket/tenders2.jpg',
+            'image2' => '/temp/paket/tenders2.jpg',
         ],
         [
             'name' => 'Şinitzel',
             'description' => 'Kaliteli kaplama, gerçekçi doku, doyurucu lezzet.',
             'features' => ['Kaliteli kaplama', 'Gerçekçi doku', 'Doyurucu lezzet'],
             'image' => '/temp/paket/sinitzel2.jpg',
+            'image2' => '/temp/paket/tenders2.jpg',
         ],
     ],
 ])
@@ -46,7 +48,7 @@
             <div class="absolute inset-0">
                 <div class="absolute inset-0 bg-linear-to-r {{ $isEven ? 'from-zinc-950 via-zinc-950/95 to-transparent' : 'from-transparent via-zinc-950/95 to-zinc-950' }}"></div>
                 <img 
-                    src="{{ asset($product['image']) }}" 
+                    src="{{ asset($product['image2']) }}" 
                     alt="{{ $product['name'] }}" 
                     class="h-full w-full object-cover opacity-30"
                 >
