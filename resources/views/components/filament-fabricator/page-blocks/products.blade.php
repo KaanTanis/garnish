@@ -10,7 +10,7 @@
 
 @aware(['page'])
 
-<section id="products" class="relative min-h-screen flex items-center overflow-hidden border-t border-white/5 pt-8">
+<section id="products" class="relative min-h-screen flex items-center overflow-hidden border-t border-white/5">
     <div class="absolute inset-0 bg-zinc-950"></div>
     
     {{-- Large decorative number --}}

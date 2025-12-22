@@ -21,7 +21,7 @@
 @aware(['page'])
 
 {{-- Title Section (at the end or beginning) --}}
-<div class="relative py-20 md:py-32 border-b border-white/5">
+<div class="relative py-8 md:py-32 border-b border-white/5">
     <div class="container mx-auto px-6">
         <div class="max-w-4xl mx-auto text-center">
             <h1 class="text-5xl md:text-7xl lg:text-8xl font-black mb-6">

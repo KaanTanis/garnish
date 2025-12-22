@@ -6,9 +6,9 @@
 
 @aware(['page'])
 
-<section class="py-32 md:py-32 relative min-h-[60vh] flex items-center">
+<section class="py-32 pb-16 md:py-32 relative flex items-center">
     <div class="absolute inset-0 bg-linear-to-b from-zinc-950 via-orange-950/10 to-zinc-950"></div>
-    <div class="relative container mx-auto px-6">
+    <div class="relative container mx-auto px-6 self-baseline">
         <div class="max-w-4xl mx-auto text-center">
             <div class="inline-block mb-6 px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-500 text-sm font-medium">
                 {{ $badge }}
